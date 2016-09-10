@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+    Author      :   Dinesh Madhup
+    Student ID  :   10447
+    E-Mail      :   dineshmadhup@gmail.com
+-->
+<html>
+    <head>
+        <title>Pizza Store | Order</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="scripts/myJavascript.js"></script>
+        <script src="scripts/jquery.js"></script>
+        <script type="text/javascript" src="scripts/scripts.js"></script>
+        
+    </head>
+        <body onload="begin = beginAdPage()" >
+        <header>
+            <div id="banner">
+                <img src="images/image11.jpg" name="imagesAd" alt="gobble banner">
+            </div>
+            <hgroup>
+                <h1>University Group Pizza Store</h1>
+                <h2>Great Food Equals Happy Team</h2>
+            </hgroup>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Orders</a></li>
+                <li><a href="cart.html">Carts</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                
+            </ul>
+        </nav>
+        <section>
+            <div id="main">
+                <h1>Order Your Best Pizza</h1>
+                <p><strong>Most Welcome to choose any Kind!</strong></p>
+                <form name="orderForm" id="orderForm" action="cart.html" method="GET">
+            <table>
+                <tr>                    
+                    <td><label for="quality">Select Size</label></td>
+                    <td>
+                        <select id="quality">
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </td>
+                </tr>               
+                <tr>
+                    <div id="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                            
+                    <td><legend>Select Pizza Kind</legend></td>
+                    <td>
+                        <input type="radio" id="1"  name="Item" value="pepperoni" checked>
+                        <label for="1">Pepperoni</label>
+                        <input type="radio" id="2" name="Item" value="veggie">
+                        <label for="2">Veggie</label>
+                        <input type="radio" id="3" name="Item" value="combo">
+                        <label for="3">combo</label>
+                        
+                    </td>
+                    </fieldset>
+                    </div>
+                </tr>
+                <tr><td>Extra Cheese</td>
+                    <td><input type="checkbox" id="glossy" name="glossy" value="" ></td>
+                </tr>
+                <tr><td>Quantity</td>
+                    <td><input type="text" value="1"  name="quantity" id="quantity" required>
+                        <span id="quantityid" style="color: red"></span>
+                    </td>
+                </tr>
+                <tr><td>Calculate</td>
+                    <td><input type="button" name="calculateCost" value="Calculate" onclick="calculate()"></td>
+                </tr>
+                <tr><td></td>
+                    <td><input type="button" name="AddCart" value="Add to Cart" onclick="store()"></td>
+                </tr>
+                <tr><td></td>
+                    <td><input type="button" name="GoCart" value="Go to cart" onclick="window.location.href='cart.html';"></td>
+                </tr>
+                <tr><td>Cost of Selected Items</td>
+                    <td><input type="text" id="costOfItems" name="Cost" value="" readonly=""></td>    
+                </tr>
+                <tr><td></td>
+                    <td><input type="reset" name="reset" value="Clear" onclick="clearLocalStorage()"></td>
+                </tr>
+            </table>               
+            </div>
+
+                <h1>Todays Special</h1>
+            </div>
+            <article>
+                <h1>One of the most popular pizza ever been sold</h1>
+                <img src="images/pizza4.jpg" alt="pizza4">
+                <h2>
+                    <script type="text/javascript">
+                        var date = new Object();
+                        date.todayDate = new Date();
+                        document.write(date.todayDate.toLocaleString());
+                    </script><br/>Mushroom-Avocado Pizza</h2>
+                <p>Pizza is an oven-baked flat bread generally topped with tomato sauce and cheese.
+                    It is commonly supplemented with a selection of meats, vegetables and condiments.
+                    The term first appeared in 997 AD, "in a Latin text from the southern Italian town
+                    of Gaeta", in Lazio, Central Italy. The modern pizza was invented in Naples, Italy,
+                    and the dish and its variants have since become popular in many areas of the world. 
+                </p>
+                <p><a href="http://en.wikipedia.org/wiki/Pizza"><b>Read more from wikipedia.</b></a>&nbsp;
+
+            </article>
+            <div id="buffet">
+                <h1>Our Buffet Prices</h1>
+                <ul>
+                    <li>Lunch Buffet: $9.99 per person</li>
+                    <li>Dinner Buffet: $10.99 per person</li>
+                    <li>Group (More than 10): $8.99 per person</li>
+                </ul>
+            </div>
+        </section>
+        <aside>
+            <h1>Everyday Specials</h1>
+            <h2>Monday and Tuesday:<br>Pepperoni Pizza</h2>
+            <img src="images/pizza1.png" alt="Pepperoni Pizza">
+            <h2>Wednesday & Thursday:<br>Tomato Spices</h2>
+            <img src="images/pizza6.jpg" alt="prpperoni">
+            <h2>Friday and Saturday:<br>Buffalo Chicken</h2>
+            <img src="images/pizza7.jpg" alt="Pepperoni Pizza">
+            <h2>Sunday:<br>Go Green with avocado</h2>
+            <img src="images/pizza8_avocado.jpg" alt="Green with avocado">
+        </aside>
+        <footer>
+            <p>&copy; 2015,University Group Organic Pizza Store</p>
+        </footer>
+    </body>
+</html>

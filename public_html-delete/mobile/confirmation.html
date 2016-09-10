@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Acknowledge</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+        <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">                
+        <script type="text/javascript" src="js/scripts.js"></script>
+        <!-- JavaScript HTML requirements -->
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body onload="display()">
+        <div data-role="page">
+            <div data-role="header" data-theme="b">
+                <h1>Pizza Store</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index.html" data-icon="home" data-transition="slide" data-ajax="false" >Home</a></li>
+                        <li><a href="Order.html" data-icon="shop" data-transition="slide" data-ajax="false" >Order</a></li>
+                        <li><a href="cart.html" data-icon="star" data-transition="slide" data-ajax="false" >Cart</a></li>
+                        <li><a href="ContactUs.html" data-icon="info" data-transition="slide" data-ajax="false">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div><!-- /header -->
+
+            <div data-role="content" align="center">
+                <h1>Thank you for your order.</h1>
+                <h2>Pizza will be delivered to your address during 40 minutes.</h2>
+                <h3>Keep or Print the following information as a Record</h3>
+                <table>
+                    <tr><td>Order Number:</td><td><span id="orderId"></span></td></tr>
+                    <tr><td><td><script type="text/javascript">display_data();</script></td></tr>
+                    <tr><td>Total Cost</td><td><span id="total"></span></td></tr>
+                </table>
+
+            </div>
+            <div data-role="footer" data-theme="b" align="center">
+                <img src="images/footer.jpg" alt="Pizza" width="100%" />
+                <p>Copyright @ Dinesh Madhup | id: 10447 | NPU | 2015</p>
+            </div><!-- /footer -->
+        </div>
+    </body>
+</html>
